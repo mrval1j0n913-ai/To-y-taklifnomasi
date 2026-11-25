@@ -1,0 +1,1480 @@
+```html
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Siz To'yimizga Taklif Etilgansiz — Temurbek va Nodirabegim</title>
+
+    <!-- Google Fonts: Great Vibes, Cormorant Garamond, Playfair Display & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
+                        display: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        crimson: {
+                            velvet: '#7B1322',
+                            deep: '#5C0D18',
+                            ink: '#8B1D2C'
+                        },
+                        espresso: {
+                            dark: '#2E1A16',
+                            main: '#3B1E1A',
+                            muted: '#6E5047'
+                        },
+                        gold: {
+                            cream: '#F5E6C8',
+                            light: '#E6C373',
+                            main: '#C8A252',
+                            border: '#C59B43',
+                            dark: '#8C651E'
+                        },
+                        ivory: {
+                            paper: '#FAF7F2',
+                            btn: '#FAF6EE'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            background-color: #19070B;
+            color: #3B1E1A;
+            font-family: 'Cormorant Garamond', serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Warm Textured Ivory Paper */
+        .ivory-paper-bg {
+            background-color: #FAF7F2;
+            background-image:
+                radial-gradient(rgba(139, 29, 44, 0.028) 1px, transparent 0),
+                radial-gradient(rgba(197, 155, 67, 0.035) 1px, transparent 0);
+            background-size: 22px 22px;
+            background-position: 0 0, 11px 11px;
+        }
+
+        /* Rich Crimson Velvet Cover with Fine Grain */
+        .crimson-velvet-bg {
+            background:
+                radial-gradient(circle at 50% 44%, #8E1729 0%, #7B1322 54%, #570B16 100%);
+        }
+
+        /* Metallic Gold Calligraphy Text Gradient */
+        .gold-script-gradient {
+            background: linear-gradient(180deg, #F9E5A8 0%, #E6C373 50%, #C2963E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+        }
+
+        /* 3D Embossed Metallic Gold Wax Seal */
+        .wax-seal-btn {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 9999px;
+            background: radial-gradient(circle at 32% 28%, #F6E19C 0%, #DFBE6F 34%, #B68B32 72%, #8C651E 100%);
+            box-shadow:
+                0 16px 32px rgba(0, 0, 0, 0.55),
+                0 4px 10px rgba(0, 0, 0, 0.38),
+                inset 0 3px 6px rgba(255, 250, 224, 0.8),
+                inset 0 -5px 10px rgba(94, 64, 12, 0.78);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+            cursor: pointer;
+        }
+
+        /* Organic Irregular Inner Wax Rim */
+        .wax-seal-btn::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border-radius: 48% 52% 51% 49% / 49% 48% 52% 51%;
+            border: 1.5px solid rgba(115, 76, 14, 0.55);
+            box-shadow:
+                inset 0 2px 4px rgba(88, 56, 8, 0.52),
+                0 1px 2px rgba(255, 248, 212, 0.7);
+        }
+
+        .wax-seal-btn::after {
+            content: '';
+            position: absolute;
+            inset: 13px;
+            border-radius: 9999px;
+            border: 1px dashed rgba(118, 79, 15, 0.42);
+        }
+
+        @keyframes sealSheenPulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 16px 32px rgba(0,0,0,0.55), 0 0 0 0 rgba(230, 195, 115, 0.38), inset 0 3px 6px rgba(255,250,224,0.8), inset 0 -5px 10px rgba(94,64,12,0.78);
+            }
+            50% {
+                transform: scale(1.035);
+                box-shadow: 0 20px 38px rgba(0,0,0,0.62), 0 0 0 14px rgba(230, 195, 115, 0), inset 0 3px 8px rgba(255,252,232,0.9), inset 0 -5px 10px rgba(94,64,12,0.78);
+            }
+        }
+
+        .seal-pulse {
+            animation: sealSheenPulse 2.8s infinite ease-in-out;
+        }
+
+        /* =====================================================================
+           EXACT VIDEO ENVELOPE OPENING SEQUENCE (00:01 - 00:02.25)
+           ===================================================================== */
+        #envelopeStage {
+            perspective: 1200px;
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.35s, transform 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+        }
+
+        #topFlapGroup {
+            transform-origin: top center;
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #bottomFlapGroup, #sideFlapsGroup, #envelopeTextGroup {
+            transition: opacity 0.55s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        #envelopeStage.opening #waxSealBtn {
+            animation: none;
+            transform: scale(0.6);
+            opacity: 0;
+        }
+
+        #envelopeStage.opening #topFlapGroup {
+            transform: rotateX(180deg);
+        }
+
+        #envelopeStage.opening #envelopeTextGroup {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        #envelopeStage.opening #bottomFlapGroup {
+            transform: translateY(45px);
+            opacity: 0;
+        }
+
+        #envelopeStage.opened {
+            opacity: 0;
+            transform: scale(1.05);
+            pointer-events: none;
+        }
+
+        /* =====================================================================
+           HERO STAGGERED ENTRANCE ANIMATIONS UPON ENVELOPE OPEN (00:02.25)
+           ===================================================================== */
+        .hero-anim {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .karnay-left-anim {
+            opacity: 0;
+            transform: translateX(-36px) rotate(-4deg);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .karnay-right-anim {
+            opacity: 0;
+            transform: translateX(36px) rotate(4deg);
+            transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .couple-art-anim {
+            opacity: 0;
+            transform: translateY(26px) scale(0.96);
+            transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1), transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        body.invitation-revealed .hero-anim,
+        body.invitation-revealed .karnay-left-anim,
+        body.invitation-revealed .karnay-right-anim,
+        body.invitation-revealed .couple-art-anim {
+            opacity: 1;
+            transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+
+        /* =====================================================================
+           SCROLL-TRIGGERED TEXT & ELEMENT REVEAL ANIMATIONS (00:04 - 00:11)
+           ===================================================================== */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal-text.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle Gentle Bounce for "PASTGA TUSHIRING" */
+        @keyframes gentleBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+        .scroll-prompt-bounce {
+            animation: gentleBounce 2.1s infinite ease-in-out;
+        }
+
+        /* Gold Heartbeat Pulse */
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            18% { transform: scale(1.13); }
+            36% { transform: scale(1.02); }
+            54% { transform: scale(1.09); }
+        }
+        .gold-heart-beat {
+            animation: heartBeat 2.4s infinite ease-in-out;
+            transform-origin: center;
+        }
+
+        /* Venue Rectangular Outline Button with Gold Shimmer */
+        .venue-map-btn {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #C59B43;
+            background: rgba(255, 255, 255, 0.65);
+            color: #3B1E1A;
+            letter-spacing: 2.5px;
+            transition: all 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .venue-map-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(230, 195, 115, 0.35), transparent);
+            transition: left 0.55s ease;
+        }
+
+        .venue-map-btn:hover {
+            background: #C8A252;
+            color: #FFFFFF;
+            border-color: #C8A252;
+            box-shadow: 0 8px 20px rgba(197, 155, 67, 0.25);
+        }
+
+        .venue-map-btn:hover::after {
+            left: 140%;
+        }
+
+        .venue-map-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Music Wave Animation */
+        @keyframes wavePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.16); opacity: 0.85; }
+        }
+        .music-active-pulse {
+            animation: wavePulse 1.4s infinite ease-in-out;
+        }
+
+        /* Countdown Tick Micro-Transition */
+        .digit-tick {
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #FAF7F2; }
+        ::-webkit-scrollbar-thumb { background: #C59B43; border-radius: 999px; }
+    </style>
+</head>
+<body class="selection:bg-[#7B1322] selection:text-[#FAF7F2]">
+
+    <!-- =====================================================================
+         1. FIXED TOP CONTROLS (EXACT 1:1 MATCH ON BOTH SCREENS)
+         ===================================================================== -->
+    <div class="fixed top-4 left-0 right-0 z-50 pointer-events-none">
+        <div class="max-w-[430px] mx-auto px-4 flex items-center justify-between">
+            <!-- Top-Left: 36x36 Rounded Square Light Cream Button with Gold Border & Music Note -->
+            <button id="musicToggleBtn" aria-label="Musiqani yoqish/o'chirish" class="pointer-events-auto w-9 h-9 rounded-[10px] bg-[#FAF6EE] border border-[#C59B43] text-[#B68B32] flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.18)] hover:scale-105 active:scale-95 transition-transform">
+                <span id="musicNoteIcon" class="text-[17px] leading-none font-serif font-bold select-none">♪</span>
+            </button>
+
+            <!-- Top-Right: Pill Language Switcher [UZ | RU] + Subtle Customize Gear -->
+            <div class="pointer-events-auto flex items-center gap-1.5">
+                <div class="flex items-center rounded-full bg-[#FAF6EE]/95 border border-[#C59B43] p-0.5 shadow-[0_4px_12px_rgba(0,0,0,0.18)] font-sans text-[10px] font-semibold tracking-wider">
+                    <button id="langUzBtn" class="px-2.5 py-1 rounded-full bg-[#C8A252] text-white transition-all">UZ</button>
+                    <button id="langRuBtn" class="px-2.5 py-1 rounded-full text-[#3B1E1A] hover:text-[#B68B32] transition-all">RU</button>
+                </div>
+
+                <button id="openSettingsBtn" title="Taklifnomani tahrirlash" class="w-8 h-8 rounded-full bg-[#FAF6EE]/95 border border-[#C59B43] text-[#3B1E1A] hover:bg-[#C8A252] hover:text-white flex items-center justify-center text-xs shadow-[0_4px_12px_rgba(0,0,0,0.18)] transition-colors">
+                    ⚙
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         2. SCREEN 1: CRIMSON VELVET ENVELOPE COVER (00:00 - 00:01)
+         ===================================================================== -->
+    <div id="envelopeStage" class="fixed inset-0 z-40 crimson-velvet-bg flex items-center justify-center select-none overflow-hidden">
+        <div class="relative w-full max-w-[430px] h-[100dvh] flex flex-col items-center justify-between px-6 py-14">
+
+            <!-- Crisp Thin Gold Diagonal Envelope Crease Lines SVG -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 430 932" preserveAspectRatio="none">
+                <defs>
+                    <filter id="velvetShadow" x="-10%" y="-10%" width="120%" height="120%">
+                        <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#290409" flood-opacity="0.52"/>
+                    </filter>
+                </defs>
+
+                <!-- Left & Right Side Envelope Folds -->
+                <g id="sideFlapsGroup">
+                    <polygon points="0,0 215,466 0,932" fill="#6F101E" opacity="0.45"/>
+                    <polygon points="430,0 215,466 430,932" fill="#6F101E" opacity="0.45"/>
+                </g>
+
+                <!-- Bottom Triangular Flap -->
+                <g id="bottomFlapGroup">
+                    <polygon points="0,932 215,456 430,932" fill="#771220"/>
+                    <line x1="0" y1="932" x2="215" y2="456" stroke="rgba(212, 175, 55, 0.55)" stroke-width="1"/>
+                    <line x1="430" y1="932" x2="215" y2="456" stroke="rgba(212, 175, 55, 0.55)" stroke-width="1"/>
+                </g>
+
+                <!-- Top Triangular Flap Meeting at Center -->
+                <g id="topFlapGroup">
+                    <polygon points="0,0 215,474 430,0" fill="#801424" filter="url(#velvetShadow)"/>
+                    <line x1="0" y1="0" x2="215" y2="474" stroke="rgba(212, 175, 55, 0.6)" stroke-width="1"/>
+                    <line x1="430" y1="0" x2="215" y2="474" stroke="rgba(212, 175, 55, 0.6)" stroke-width="1"/>
+                </g>
+            </svg>
+
+            <!-- Top Header Text Inside Top Flap -->
+            <div id="envelopeTextGroup" class="relative z-10 text-center mt-8">
+                <p id="envTopSub" class="font-display text-[12px] tracking-[4px] uppercase text-[#F5E6C8] mb-1">
+                    SIZ
+                </p>
+                <h1 id="envMainTitle" class="font-display text-[23px] font-medium tracking-[2px] uppercase text-[#F5E6C8] leading-snug">
+                    TO‘YIMIZGA
+                </h1>
+                <p id="envBottomScript" class="font-script text-[39px] leading-none gold-script-gradient mt-0.5">
+                    taklif etilgansiz
+                </p>
+            </div>
+
+            <!-- Center 96px Embossed 3D Gold Wax Seal -->
+            <div class="relative z-20 flex flex-col items-center my-auto">
+                <button id="waxSealBtn" aria-label="Taklifnomani ochish" class="wax-seal-btn seal-pulse flex items-center justify-center">
+                    <span id="sealMonogram" class="relative z-10 font-display font-semibold text-[22px] tracking-[1px] text-[#583B0B] drop-shadow-[0_1px_0_rgba(255,250,224,0.85)]">
+                        T &amp; N
+                    </span>
+                </button>
+            </div>
+
+            <!-- Bottom Flap Text -->
+            <div id="envelopeBottomText" class="relative z-10 text-center mb-4 transition-opacity duration-500">
+                <p id="envWithLove" class="font-serif italic text-[15px] text-[#EBD5AC] mb-1">
+                    muhabbat ila,
+                </p>
+                <p id="envCoupleNames" class="font-display text-[13px] tracking-[2.5px] uppercase text-[#F5E6C8]">
+                    TEMURBEK VA NODIRABEGIM
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         3. SCREEN 2: INNER INVITATION SCROLLABLE CARD (00:02.25 - 00:11.50)
+         ===================================================================== -->
+    <main class="min-h-screen flex justify-center bg-[#19070B]">
+        <article id="invitationCard" class="w-full max-w-[430px] ivory-paper-bg shadow-[0_25px_75px_rgba(0,0,0,0.75)] overflow-hidden relative">
+
+            <!-- ===============================================================
+                 SECTION 1: HERO (FULL FIRST SCREEN HEIGHT, 100dvh)
+                 =============================================================== -->
+            <section class="min-h-[100dvh] flex flex-col justify-between pt-14 pb-6 relative">
+                
+                <!-- Top Suzani Ornamental Band -->
+                <div class="w-full px-2 hero-anim" style="transition-delay: 80ms;">
+                    <svg class="w-full h-11" viewBox="0 0 420 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <g id="topSuzaniUnit">
+                                <path d="M0 22 Q17.5 6 35 22 Q52.5 38 70 22" stroke="#2B593B" stroke-width="1.6" fill="none"/>
+                                <path d="M0 22 Q17.5 38 35 22 Q52.5 6 70 22" stroke="#C59B43" stroke-width="1.1" fill="none"/>
+                                <!-- Crimson & Ochre Suzani Medallion -->
+                                <circle cx="35" cy="22" r="10.5" fill="#8B1D2C"/>
+                                <circle cx="35" cy="22" r="6.5" fill="#FAF7F2"/>
+                                <circle cx="35" cy="22" r="3.5" fill="#D99B26"/>
+                                <circle cx="35" cy="22" r="1.4" fill="#231815"/>
+                                <!-- Leaves & Terracotta Buds -->
+                                <ellipse cx="14" cy="14" rx="4.5" ry="2.4" transform="rotate(-25 14 14)" fill="#2B593B"/>
+                                <ellipse cx="56" cy="30" rx="4.5" ry="2.4" transform="rotate(-25 56 30)" fill="#2B593B"/>
+                                <circle cx="14" cy="30" r="2.7" fill="#C44D2C"/>
+                                <circle cx="56" cy="14" r="2.7" fill="#C44D2C"/>
+                                <circle cx="0" cy="22" r="2.6" fill="#231815"/>
+                            </g>
+                        </defs>
+                        <use href="#topSuzaniUnit" x="0" y="0"/>
+                        <use href="#topSuzaniUnit" x="70" y="0"/>
+                        <use href="#topSuzaniUnit" x="140" y="0"/>
+                        <use href="#topSuzaniUnit" x="210" y="0"/>
+                        <use href="#topSuzaniUnit" x="280" y="0"/>
+                        <use href="#topSuzaniUnit" x="350" y="0"/>
+                        <line x1="0" y1="42" x2="420" y2="42" stroke="#C59B43" stroke-opacity="0.45" stroke-width="0.9"/>
+                    </svg>
+                </div>
+
+                <!-- Twin Golden Karnay Trumpets Facing Inward Symmetrically -->
+                <div class="w-full px-1 -mt-1">
+                    <svg class="w-full h-20" viewBox="0 0 430 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="karnayMetal" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#F7E3A1"/>
+                                <stop offset="48%" stop-color="#D4AF37"/>
+                                <stop offset="85%" stop-color="#9A6E18"/>
+                                <stop offset="100%" stop-color="#E6C373"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Left Golden Karnay -->
+                        <g class="karnay-left-anim" style="transition-delay: 160ms;">
+                            <path d="M-6 10 L158 31 L184 20 L184 47 L158 36 L-6 21 Z" fill="url(#karnayMetal)" stroke="#7A540C" stroke-width="0.7"/>
+                            <rect x="52" y="13" width="3.5" height="13" rx="1.5" fill="#8B1D2C"/>
+                            <rect x="108" y="20" width="3.5" height="13" rx="1.5" fill="#8B1D2C"/>
+                            <ellipse cx="184" cy="33.5" rx="3.5" ry="13.5" fill="#5A3908"/>
+                            <!-- Silk Tassels -->
+                            <line x1="54" y1="26" x2="54" y2="49" stroke="#C59B43" stroke-width="1.2"/>
+                            <circle cx="54" cy="50" r="2.6" fill="#D4AF37"/>
+                            <path d="M50.5 52.5 L57.5 52.5 L59 69 L49 69 Z" fill="#8B1D2C"/>
+
+                            <line x1="110" y1="33" x2="110" y2="57" stroke="#C59B43" stroke-width="1.2"/>
+                            <circle cx="110" cy="58" r="2.6" fill="#D4AF37"/>
+                            <path d="M106.5 60.5 L113.5 60.5 L115 77 L105 77 Z" fill="#8B1D2C"/>
+                        </g>
+
+                        <!-- Right Golden Karnay -->
+                        <g class="karnay-right-anim" style="transition-delay: 160ms;">
+                            <g transform="translate(430, 0) scale(-1, 1)">
+                                <path d="M-6 10 L158 31 L184 20 L184 47 L158 36 L-6 21 Z" fill="url(#karnayMetal)" stroke="#7A540C" stroke-width="0.7"/>
+                                <rect x="52" y="13" width="3.5" height="13" rx="1.5" fill="#8B1D2C"/>
+                                <rect x="108" y="20" width="3.5" height="13" rx="1.5" fill="#8B1D2C"/>
+                                <ellipse cx="184" cy="33.5" rx="3.5" ry="13.5" fill="#5A3908"/>
+                                <!-- Silk Tassels -->
+                                <line x1="54" y1="26" x2="54" y2="49" stroke="#C59B43" stroke-width="1.2"/>
+                                <circle cx="54" cy="50" r="2.6" fill="#D4AF37"/>
+                                <path d="M50.5 52.5 L57.5 52.5 L59 69 L49 69 Z" fill="#8B1D2C"/>
+
+                                <line x1="110" y1="33" x2="110" y2="57" stroke="#C59B43" stroke-width="1.2"/>
+                                <circle cx="110" cy="58" r="2.6" fill="#D4AF37"/>
+                                <path d="M106.5 60.5 L113.5 60.5 L115 77 L105 77 Z" fill="#8B1D2C"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Names in Dark Espresso/Burgundy Calligraphy -->
+                <div class="px-6 text-center -mt-2">
+                    <h2 id="groomDisplay" class="hero-anim font-script text-[44px] sm:text-[48px] leading-[1.05] text-[#3B1E1A]" style="transition-delay: 280ms;">
+                        Temurbek
+                    </h2>
+                    <p id="andWordDisplay" class="hero-anim font-serif italic text-[17px] text-[#7A5C43] -my-1" style="transition-delay: 350ms;">
+                        va
+                    </p>
+                    <h2 id="brideDisplay" class="hero-anim font-script text-[44px] sm:text-[48px] leading-[1.08] text-[#3B1E1A]" style="transition-delay: 420ms;">
+                        Nodirabegim
+                    </h2>
+                </div>
+
+                <!-- Central Traditional Uzbek Bride (Left) & Groom (Right) Burgundy Line-Art Illustration -->
+                <div class="couple-art-anim mx-auto w-[235px] sm:w-[250px] my-1" style="transition-delay: 520ms;">
+                    <svg viewBox="0 0 260 265" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <!-- Delicate Arch Frame -->
+                        <path d="M44 252 V114 A86 86 0 0 1 216 114 V252" stroke="#8B1D2C" stroke-opacity="0.18" stroke-width="1.1" stroke-dasharray="3 3"/>
+
+                        <!-- BRIDE ON THE LEFT (Embroidered Bridal Dress, Veil/Tiara, Looking Shyly Toward Groom) -->
+                        <g stroke="#8B1D2C" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Flowing Harir Bridal Veil -->
+                            <path d="M98 48 C80 44, 60 62, 50 118 C43 158, 39 206, 36 248 H76" fill="#8B1D2C" fill-opacity="0.07" stroke-width="1.3"/>
+                            <!-- Bridal Crown / Tiara -->
+                            <path d="M84 56 Q98 46 112 56" fill="#8B1D2C" stroke-width="1.4"/>
+                            <circle cx="98" cy="49" r="2" fill="#C59B43" stroke="none"/>
+                            <!-- Bride Head Profile Facing Right Toward Groom -->
+                            <path d="M86 58 C86 71, 91 81, 99 81 C107 81, 111 72, 111 58" fill="#FAF7F2" stroke-width="1.5"/>
+                            <!-- Shy Downcast Eyelashes & Delicate Profile -->
+                            <path d="M102 66 Q105 67 107 66" stroke-width="1.2"/>
+                            <path d="M106 70 L108 73 L105 74" stroke-width="1.1"/>
+                            <path d="M101 77 Q104 78 106 77" stroke-width="1.1"/>
+
+                            <!-- Embroidered Uzbek Bridal Gown -->
+                            <path d="M77 95 C82 86, 90 83, 99 83 C108 83, 115 87, 120 97 L132 248 H60 L77 95 Z" fill="#FAF7F2" stroke-width="1.5"/>
+                            <!-- Ornate Bodice & Stippled Embroidery Details -->
+                            <path d="M84 85 L99 116 L114 85" fill="#8B1D2C" fill-opacity="0.15" stroke-width="1.2"/>
+                            <path d="M73 136 Q98 142 123 136" stroke-width="1.4"/>
+                            <!-- Vertical Suzani Floral Strips on Bridal Skirt -->
+                            <path d="M84 140 L76 246 M97 141 V246 M110 140 L118 246" stroke-width="0.95" stroke-dasharray="3 3"/>
+                            <circle cx="81" cy="175" r="2.2" fill="#8B1D2C"/>
+                            <circle cx="97" cy="182" r="2.2" fill="#8B1D2C"/>
+                            <circle cx="113" cy="175" r="2.2" fill="#8B1D2C"/>
+                            <circle cx="79" cy="212" r="2.2" fill="#8B1D2C"/>
+                            <circle cx="97" cy="218" r="2.2" fill="#8B1D2C"/>
+                            <circle cx="115" cy="212" r="2.2" fill="#8B1D2C"/>
+                            <!-- Hem Border -->
+                            <path d="M62 237 Q96 241 130 237" stroke-width="1.8"/>
+                            <path d="M61 243 Q96 247 131 243" stroke-width="1.1"/>
+                        </g>
+
+                        <!-- GROOM ON THE RIGHT (Chapan Robe, Ornate Belt, Andijan/Chust Doppi, Hands Folded) -->
+                        <g stroke="#8B1D2C" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Chust / Andijan Doppi (Skullcap) -->
+                            <path d="M148 52 C148 40, 176 40, 176 52 L178 59 L146 59 Z" fill="#8B1D2C"/>
+                            <path d="M153 51 Q157 47 159 51 M165 51 Q169 47 171 51" stroke="#FAF7F2" stroke-width="1.15"/>
+                            <!-- Groom Head Facing Slightly Left -->
+                            <path d="M149 59 C149 72, 153 81, 161 81 C170 81, 175 71, 174 59" fill="#FAF7F2" stroke-width="1.5"/>
+                            <path d="M153 66 Q156 65 158 66" stroke-width="1.2"/>
+                            <path d="M154 70 L152 73 L155 74" stroke-width="1.1"/>
+                            <path d="M154 77 Q157 78 159 77" stroke-width="1.1"/>
+
+                            <!-- Traditional Uzbek Zar-Chapan (Embroidered Robe) -->
+                            <path d="M137 95 C141 86, 152 83, 162 83 C172 83, 184 87, 188 95 L194 248 H131 L137 95 Z" fill="#8B1D2C" stroke-width="1.5"/>
+                            <!-- White Inner Shirt Collar & Robe Lapel -->
+                            <path d="M154 83 L162 104 L170 83" fill="#FAF7F2" stroke-width="1.3"/>
+                            <path d="M162 104 V248" stroke="#FAF7F2" stroke-width="1.4"/>
+
+                            <!-- Respectfully Folded Hands Over Chest -->
+                            <path d="M148 118 Q162 124 176 118 Q174 129 162 129 Q150 129 148 118 Z" fill="#FAF7F2" stroke-width="1.3"/>
+
+                            <!-- Ornate Belbog' (Waist Sash) -->
+                            <path d="M135 142 Q162 148 189 142 L190 154 Q162 160 134 154 Z" fill="#FAF7F2" stroke-width="1.35"/>
+                            <path d="M140 147 Q162 152 184 147" stroke="#8B1D2C" stroke-width="1"/>
+
+                            <!-- Medallion Patterns on Chapan -->
+                            <circle cx="146" cy="178" r="4.5" stroke="#FAF7F2" stroke-width="1"/>
+                            <circle cx="178" cy="178" r="4.5" stroke="#FAF7F2" stroke-width="1"/>
+                            <circle cx="145" cy="212" r="4.5" stroke="#FAF7F2" stroke-width="1"/>
+                            <circle cx="179" cy="212" r="4.5" stroke="#FAF7F2" stroke-width="1"/>
+                            <path d="M132 241 H193" stroke="#FAF7F2" stroke-width="1.4"/>
+                        </g>
+
+                        <!-- Ground Line -->
+                        <line x1="34" y1="252" x2="226" y2="252" stroke="#8B1D2C" stroke-opacity="0.65" stroke-width="1.3"/>
+                    </svg>
+                </div>
+
+                <!-- Bottom Scroll Prompt: PASTGA TUSHIRING with Downward Chevron -->
+                <div class="hero-anim text-center pt-1" style="transition-delay: 680ms;">
+                    <p id="scrollDownPrompt" class="font-sans text-[10px] font-medium tracking-[3px] uppercase text-[#8C6D53]">
+                        PASTGA TUSHIRING
+                    </p>
+                    <div class="scroll-prompt-bounce inline-flex justify-center mt-1 text-[#8C6D53]">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===============================================================
+                 SECTION 2: CRIMSON SUZANI INVITATION CARD (00:04.50 - 00:06.00)
+                 =============================================================== -->
+            <section class="relative">
+                <!-- Top Vibrant Suzani Floral Border -->
+                <div class="bg-[#FAF7F2] py-2 px-2 border-t border-b border-[#C59B43]/40">
+                    <svg class="w-full h-10" viewBox="0 0 420 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <g id="crimsonSuzaniBand">
+                                <path d="M0 20 C15 6, 35 6, 50 20 C65 34, 85 34, 105 20" stroke="#2B593B" stroke-width="1.8" fill="none"/>
+                                <!-- Crimson & Gold Pomegranate Flower -->
+                                <circle cx="26" cy="20" r="10" fill="#8B1D2C"/>
+                                <circle cx="26" cy="20" r="5.8" fill="#E6C373"/>
+                                <circle cx="26" cy="20" r="2.6" fill="#FAF7F2"/>
+                                <!-- Forest Green Leaves -->
+                                <path d="M50 20 Q58 9 68 13 Q60 22 50 20 Z" fill="#2B593B"/>
+                                <path d="M50 20 Q58 31 68 27 Q60 18 50 20 Z" fill="#2B593B"/>
+                                <!-- Secondary Flower -->
+                                <circle cx="82" cy="20" r="8.5" fill="#7B1322"/>
+                                <circle cx="82" cy="20" r="4" fill="#FAF7F2"/>
+                            </g>
+                        </defs>
+                        <use href="#crimsonSuzaniBand" x="0" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="105" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="210" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="315" y="0"/>
+                    </svg>
+                </div>
+
+                <!-- Deep Crimson Block with Staggered Scroll-Triggered Text Reveals -->
+                <div class="crimson-velvet-bg text-[#FAF7F2] px-7 py-11 text-center">
+                    <h3 id="msgHeadingDisplay" class="reveal-text font-script text-[35px] sm:text-[38px] leading-tight text-[#F2D28B] mb-5">
+                        Aziz va qadrdon insonimiz!
+                    </h3>
+
+                    <div id="msgBodyDisplay" class="space-y-4 font-serif text-[17px] sm:text-[18px] leading-[1.68] text-[#FAF7F2]/95">
+                        <p class="reveal-text" style="transition-delay: 120ms;">
+                            Hayotimizdagi eng baxtli kunlardan biri – nikoh to‘yimizni siz bilan birga nishonlashni niyat qildik.
+                        </p>
+                        <p class="reveal-text" style="transition-delay: 240ms;">
+                            Sizni ushbu kechamizga samimiy taklif etamiz.
+                        </p>
+                        <p class="reveal-text" style="transition-delay: 360ms;">
+                            Quvonchli kunimizda aziz mehmonimiz bo‘lishingizni intizorlik bilan kutamiz.
+                        </p>
+                    </div>
+
+                    <!-- Centered Subtle Golden Ornamental Divider Below Text -->
+                    <div class="reveal-text flex items-center justify-center gap-3 mt-7 opacity-85" style="transition-delay: 460ms;">
+                        <div class="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#E6C373]"></div>
+                        <span class="text-[#E6C373] text-xs">❖</span>
+                        <div class="h-[1px] w-16 bg-gradient-to-l from-transparent to-[#E6C373]"></div>
+                    </div>
+                </div>
+
+                <!-- Bottom Vibrant Suzani Floral Border -->
+                <div class="bg-[#FAF7F2] py-2 px-2 border-t border-b border-[#C59B43]/40">
+                    <svg class="w-full h-10" viewBox="0 0 420 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#crimsonSuzaniBand" x="0" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="105" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="210" y="0"/>
+                        <use href="#crimsonSuzaniBand" x="315" y="0"/>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- ===============================================================
+                 SECTION 3: CALENDAR WITH GOLDEN HEART (00:06.25 - 00:08.00)
+                 =============================================================== -->
+            <section class="px-6 pt-10 pb-8 text-center relative">
+                <!-- Top-Left Decorative Pomegranate & Floral Branch SVG -->
+                <svg class="reveal-text absolute top-4 left-3 w-16 h-16 pointer-events-none" viewBox="0 0 70 70" fill="none">
+                    <path d="M10 54 Q26 26 56 20" stroke="#4D6B3C" stroke-width="1.8" fill="none"/>
+                    <ellipse cx="24" cy="30" rx="8" ry="3.8" transform="rotate(-35 24 30)" fill="#4D6B3C"/>
+                    <ellipse cx="39" cy="42" rx="7.5" ry="3.5" transform="rotate(22 39 42)" fill="#4D6B3C"/>
+                    <circle cx="44" cy="24" r="12" fill="#8B1D2C"/>
+                    <path d="M50 13 L55 8 L56 15 L61 16 L54 20 Z" fill="#8B1D2C"/>
+                    <circle cx="40" cy="21" r="2.2" fill="#F2D28B" opacity="0.8"/>
+                </svg>
+
+                <!-- Month & Year Calligraphy Title -->
+                <h3 id="calendarMonthTitle" class="reveal-text font-script text-[36px] sm:text-[40px] text-[#4A251D] leading-none mt-3 mb-6">
+                    Aprel, 2026
+                </h3>
+
+                <!-- Clean 7-Column Weekday Header & Compact Video-Matched Date Row -->
+                <div class="reveal-text max-w-[330px] mx-auto" style="transition-delay: 140ms;">
+                    <div id="calendarWeekdays" class="grid grid-cols-7 gap-1 font-sans text-[11px] font-semibold tracking-[1.5px] text-[#8C6D53] pb-3 border-b border-[#C59B43]/30 mb-3.5">
+                        <span>DU</span>
+                        <span>SE</span>
+                        <span>CHOR</span>
+                        <span>PAY</span>
+                        <span>JU</span>
+                        <span>SHA</span>
+                        <span>YA</span>
+                    </div>
+
+                    <!-- Dynamic Calendar Dates (Default: 30 31 1 2 3 4 [5 inside Gold Heart]) -->
+                    <div id="calendarDaysGrid" class="grid grid-cols-7 gap-y-2.5 gap-x-1 items-center justify-items-center font-serif text-[18px] text-[#3B1E1A]">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+
+                <!-- Bottom-Right Decorative Pomegranate & Floral Branch SVG -->
+                <svg class="reveal-text absolute bottom-1 right-3 w-16 h-16 pointer-events-none transform scale-x-[-1]" viewBox="0 0 70 70" fill="none" style="transition-delay: 220ms;">
+                    <path d="M10 54 Q26 26 56 20" stroke="#4D6B3C" stroke-width="1.8" fill="none"/>
+                    <ellipse cx="24" cy="30" rx="8" ry="3.8" transform="rotate(-35 24 30)" fill="#4D6B3C"/>
+                    <ellipse cx="39" cy="42" rx="7.5" ry="3.5" transform="rotate(22 39 42)" fill="#4D6B3C"/>
+                    <circle cx="44" cy="24" r="12" fill="#8B1D2C"/>
+                    <path d="M50 13 L55 8 L56 15 L61 16 L54 20 Z" fill="#8B1D2C"/>
+                    <circle cx="40" cy="21" r="2.2" fill="#F2D28B" opacity="0.8"/>
+                </svg>
+            </section>
+
+            <!-- Subtle Golden Divider -->
+            <div class="reveal-text flex items-center justify-center gap-3 px-14 my-1 opacity-70">
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#C59B43]"></div>
+                <span class="text-[#C59B43] text-[10px]">✦</span>
+                <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#C59B43]"></div>
+            </div>
+
+            <!-- ===============================================================
+                 SECTION 4: VENUE & MAP BUTTONS (00:07.50 - 00:09.75)
+                 =============================================================== -->
+            <section class="px-7 pt-7 pb-8 text-center relative">
+                <!-- Title with Right-Side Pomegranate Floral Accent -->
+                <div class="reveal-text relative inline-flex items-center justify-center mb-4">
+                    <h3 id="venueSectionTitle" class="font-script text-[38px] sm:text-[42px] text-[#4A251D] leading-tight">
+                        To‘y manzili
+                    </h3>
+                    <svg class="w-11 h-11 ml-1 -mt-2 shrink-0 transform scale-x-[-1]" viewBox="0 0 60 60" fill="none">
+                        <path d="M12 44 Q24 22 46 18" stroke="#4D6B3C" stroke-width="1.6" fill="none"/>
+                        <ellipse cx="23" cy="26" rx="6.5" ry="3.2" transform="rotate(-35 23 26)" fill="#4D6B3C"/>
+                        <circle cx="38" cy="22" r="10" fill="#8B1D2C"/>
+                        <path d="M43 13 L47 9 L48 14 L52 15 L46 18 Z" fill="#8B1D2C"/>
+                    </svg>
+                </div>
+
+                <!-- Venue Details (Staggered Reveal) -->
+                <div class="space-y-1 mb-6">
+                    <p id="venueNameLine1" class="reveal-text font-display text-[14px] font-bold tracking-[2.5px] uppercase text-[#2E1A16]" style="transition-delay: 100ms;">
+                        YAKKA SAROY
+                    </p>
+                    <p id="venueNameLine2" class="reveal-text font-display text-[14px] font-bold tracking-[2.5px] uppercase text-[#2E1A16]" style="transition-delay: 160ms;">
+                        RESTORANI
+                    </p>
+                    <p id="venueRegionDisplay" class="reveal-text font-serif italic text-[16px] text-[#5C3D34] pt-0.5" style="transition-delay: 220ms;">
+                        Qashqadaryo
+                    </p>
+                    <p id="venueAddressDisplay" class="reveal-text font-serif text-[14px] text-[#6E5047] pt-1" style="transition-delay: 280ms;">
+                        Mirhakim Oqilov ko‘chasi, 113
+                    </p>
+                    <p id="venueLandmarkDisplay" class="reveal-text font-serif text-[14px] text-[#6E5047]" style="transition-delay: 340ms;">
+                        18:00 • Qizil-baqiri
+                    </p>
+                </div>
+
+                <!-- Two Stacked Wide Rectangular Outline Map Buttons -->
+                <div class="reveal-text space-y-3 max-w-[280px] mx-auto" style="transition-delay: 420ms;">
+                    <a id="yandexMapBtn" href="https://yandex.uz/maps/?text=Yakka%20Saroy%20Restorani%20Qashqadaryo" target="_blank" rel="noopener noreferrer" class="venue-map-btn block w-full py-[13px] px-5 font-sans text-[11px] font-semibold uppercase text-center">
+                        YANDEX XARITASI
+                    </a>
+                    <a id="googleMapBtn" href="https://maps.google.com/?q=Yakka+Saroy+Restorani+Qashqadaryo" target="_blank" rel="noopener noreferrer" class="venue-map-btn block w-full py-[13px] px-5 font-sans text-[11px] font-semibold uppercase text-center">
+                        GOOGLE MAPS
+                    </a>
+                </div>
+            </section>
+
+            <!-- Subtle Golden Divider -->
+            <div class="reveal-text flex items-center justify-center gap-3 px-14 my-1 opacity-70">
+                <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#C59B43]"></div>
+                <span class="text-[#C59B43] text-[10px]">✦</span>
+                <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#C59B43]"></div>
+            </div>
+
+            <!-- ===============================================================
+                 SECTION 5: LIVE COUNTDOWN & FOOTER (00:08.75 - 00:11.50)
+                 =============================================================== -->
+            <section class="px-6 pt-7 pb-12 text-center">
+                <!-- Two-Line Calligraphy Heading -->
+                <h3 id="countdownTitleLine1" class="reveal-text font-script text-[36px] sm:text-[40px] text-[#4A251D] leading-[1.05]">
+                    Har lahzani
+                </h3>
+                <h3 id="countdownTitleLine2" class="reveal-text font-script text-[36px] sm:text-[40px] text-[#4A251D] leading-[1.05] mb-6" style="transition-delay: 100ms;">
+                    sanaymiz
+                </h3>
+
+                <!-- Live 4-Column Ticking Countdown Timer -->
+                <div class="reveal-text grid grid-cols-4 max-w-[300px] mx-auto mb-6" style="transition-delay: 200ms;">
+                    <div class="px-1">
+                        <span id="cdDays" class="digit-tick block font-display text-[30px] font-normal text-[#3B1E1A] leading-none">13</span>
+                        <span id="cdDaysLabel" class="block font-sans text-[9px] font-medium tracking-[2px] uppercase text-[#8C6D53] mt-2">KUN</span>
+                    </div>
+                    <div class="px-1">
+                        <span id="cdHours" class="digit-tick block font-display text-[30px] font-normal text-[#3B1E1A] leading-none">07</span>
+                        <span id="cdHoursLabel" class="block font-sans text-[9px] font-medium tracking-[2px] uppercase text-[#8C6D53] mt-2">SOAT</span>
+                    </div>
+                    <div class="px-1">
+                        <span id="cdMinutes" class="digit-tick block font-display text-[30px] font-normal text-[#3B1E1A] leading-none">28</span>
+                        <span id="cdMinutesLabel" class="block font-sans text-[9px] font-medium tracking-[2px] uppercase text-[#8C6D53] mt-2">DAQIQA</span>
+                    </div>
+                    <div class="px-1">
+                        <span id="cdSeconds" class="digit-tick block font-display text-[30px] font-normal text-[#3B1E1A] leading-none">37</span>
+                        <span id="cdSecondsLabel" class="block font-sans text-[9px] font-medium tracking-[2px] uppercase text-[#8C6D53] mt-2">SONIYA</span>
+                    </div>
+                </div>
+
+                <!-- Subtitle -->
+                <p id="footerSubtitle" class="reveal-text font-serif italic text-[14px] text-[#6E5047] mb-5" style="transition-delay: 280ms;">
+                    Baxtli kunimiz yaqinlashmoqda
+                </p>
+
+                <!-- Centered Floral Bouquet Ornament SVG (Pomegranates, Roses, Leaves) -->
+                <div class="reveal-text mx-auto w-28 h-16 flex items-center justify-center mb-3" style="transition-delay: 350ms;">
+                    <svg viewBox="0 0 130 76" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <!-- Flowing Botanical Stems -->
+                        <path d="M18 54 Q65 32 112 54" stroke="#4D6B3C" stroke-width="1.6" fill="none"/>
+                        <path d="M36 60 Q65 44 94 60" stroke="#C59B43" stroke-width="1.1" fill="none"/>
+                        <!-- Olive Green Leaves -->
+                        <ellipse cx="32" cy="43" rx="8.5" ry="3.8" transform="rotate(-25 32 43)" fill="#4D6B3C"/>
+                        <ellipse cx="98" cy="43" rx="8.5" ry="3.8" transform="rotate(25 98 43)" fill="#4D6B3C"/>
+                        <ellipse cx="46" cy="56" rx="6.5" ry="3" transform="rotate(15 46 56)" fill="#4D6B3C"/>
+                        <ellipse cx="84" cy="56" rx="6.5" ry="3" transform="rotate(-15 84 56)" fill="#4D6B3C"/>
+                        <!-- Left & Right Crimson Roses -->
+                        <circle cx="43" cy="39" r="8" fill="#A62639"/>
+                        <circle cx="43" cy="39" r="4" fill="#E6C373"/>
+                        <circle cx="87" cy="39" r="8" fill="#A62639"/>
+                        <circle cx="87" cy="39" r="4" fill="#E6C373"/>
+                        <!-- Central Crimson Pomegranate -->
+                        <circle cx="65" cy="33" r="14" fill="#8B1D2C"/>
+                        <path d="M60 19 L62 13 L65 17 L68 13 L70 19 Z" fill="#8B1D2C"/>
+                        <circle cx="61" cy="30" r="2.5" fill="#F2D28B" opacity="0.8"/>
+                    </svg>
+                </div>
+
+                <!-- Minimal Footer Signature -->
+                <p id="footerBrandSignature" class="reveal-text font-sans text-[10px] font-semibold tracking-[3px] uppercase text-[#9E826B]" style="transition-delay: 420ms;">
+                    Ahmadjonov
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <!-- =====================================================================
+         4. CUSTOMIZATION MODAL (⚙) — GENERATE PERSONALIZED ?c= LINKS
+         ===================================================================== -->
+    <div id="settingsModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+        <div class="w-full max-w-md max-h-[88vh] overflow-y-auto rounded-3xl bg-[#FAF7F2] border-2 border-[#C59B43] p-6 text-[#3B1E1A] shadow-2xl">
+            <div class="flex items-center justify-between pb-3 border-b border-[#C59B43]/30 mb-4">
+                <div>
+                    <h3 class="font-display font-semibold text-xl text-[#3B1E1A]">Taklifnomani Sozlash</h3>
+                    <p class="font-sans text-[11px] text-[#6E5047]">Ma'lumotlarni o'zgartiring va shaxsiy havola oling</p>
+                </div>
+                <button id="closeSettingsBtn" class="w-8 h-8 rounded-full bg-[#3B1E1A]/10 hover:bg-[#7B1322] hover:text-white flex items-center justify-center font-sans text-sm transition-colors">✕</button>
+            </div>
+
+            <div class="space-y-3 font-sans text-xs">
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block font-semibold mb-1">Kuyov ismi</label>
+                        <input id="inpGroom" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Kelin ismi</label>
+                        <input id="inpBride" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block font-semibold mb-1">To'y sanasi</label>
+                        <input id="inpDate" type="date" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Boshlanish vaqti</label>
+                        <input id="inpTime" type="time" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block font-semibold mb-1">Restoran (1-qator)</label>
+                        <input id="inpVenue1" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Restoran (2-qator)</label>
+                        <input id="inpVenue2" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block font-semibold mb-1">Viloyat / Shahar</label>
+                        <input id="inpRegion" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Mo'ljal</label>
+                        <input id="inpLandmark" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1">Ko'cha va uy manzili</label>
+                    <input id="inpAddress" type="text" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block font-semibold mb-1">Yandex Xarita havolasi</label>
+                        <input id="inpYandex" type="url" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                    <div>
+                        <label class="block font-semibold mb-1">Google Maps havolasi</label>
+                        <input id="inpGoogle" type="url" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold mb-1">Taklif matni (O'zbekcha)</label>
+                    <textarea id="inpMsgUz" rows="3" class="w-full px-3 py-2 rounded-xl bg-white border border-[#C59B43]/50 focus:outline-none focus:border-[#7B1322]"></textarea>
+                </div>
+
+                <div class="pt-2 space-y-2">
+                    <button id="applySettingsBtn" class="w-full py-3 rounded-xl bg-[#7B1322] text-[#FAF7F2] font-semibold tracking-wider uppercase hover:bg-[#5C0D18] transition-colors">
+                        ✓ O'zgarishlarni qo'llash
+                    </button>
+                    <button id="copyShareLinkBtn" class="w-full py-3 rounded-xl border border-[#C59B43] text-[#3B1E1A] font-semibold tracking-wider uppercase hover:bg-[#C8A252] hover:text-white transition-colors">
+                        🔗 Shaxsiy havolani nusxalash
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification -->
+    <div id="toastBox" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-full bg-[#7B1322] border border-[#E6C373] text-[#FAF7F2] font-sans text-xs font-medium shadow-xl opacity-0 pointer-events-none transition-all duration-300">
+        Xabar
+    </div>
+
+    <script>
+        /* =====================================================================
+           1. GENTLE UZBEK DUTAR / WEDDING AMBIENT SYNTHESIZER + PAPER SOUND
+           ===================================================================== */
+        class UzbekWeddingAudio {
+            constructor() {
+                this.ctx = null;
+                this.isPlaying = false;
+                this.timer = null;
+                this.idx = 0;
+                // Gentle D-Hijaz / Tanovor-inspired romantic dutar plucked melody
+                this.notes = [
+                    { f: 293.66, d: 0.48 }, // D4
+                    { f: 311.13, d: 0.48 }, // Eb4
+                    { f: 369.99, d: 0.72 }, // F#4
+                    { f: 392.00, d: 0.48 }, // G4
+                    { f: 440.00, d: 0.90 }, // A4
+                    { f: 392.00, d: 0.48 }, // G4
+                    { f: 369.99, d: 0.48 }, // F#4
+                    { f: 311.13, d: 0.72 }, // Eb4
+                    { f: 293.66, d: 0.96 }, // D4
+                    { f: 440.00, d: 0.48 }, // A4
+                    { f: 466.16, d: 0.48 }, // Bb4
+                    { f: 587.33, d: 0.90 }, // D5
+                    { f: 466.16, d: 0.48 }, // Bb4
+                    { f: 440.00, d: 0.56 }, // A4
+                    { f: 392.00, d: 0.56 }, // G4
+                    { f: 369.99, d: 0.96 }  // F#4
+                ];
+            }
+
+            ensureCtx() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) this.ctx = new AudioCtx();
+                }
+                if (this.ctx && this.ctx.state === 'suspended') {
+                    this.ctx.resume();
+                }
+            }
+
+            // Soft golden shimmer + parchment unfold sound on wax seal tap
+            playEnvelopeUnfold() {
+                this.ensureCtx();
+                if (!this.ctx) return;
+                const now = this.ctx.currentTime;
+
+                // Soft shimmering chord
+                [587.33, 739.99, 880.00].forEach((freq, i) => {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(freq, now + i * 0.06);
+                    gain.gain.setValueAtTime(0.001, now + i * 0.06);
+                    gain.gain.linearRampToValueAtTime(0.045, now + i * 0.06 + 0.05);
+                    gain.gain.exponentialRampToValueAtTime(0.0005, now + i * 0.06 + 0.75);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start(now + i * 0.06);
+                    osc.stop(now + i * 0.06 + 0.8);
+                });
+            }
+
+            pluckDutar(freq, duration) {
+                if (!this.ctx || !this.isPlaying) return;
+                const now = this.ctx.currentTime;
+
+                const osc1 = this.ctx.createOscillator();
+                const osc2 = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                const overtoneGain = this.ctx.createGain();
+
+                osc1.type = 'triangle';
+                osc2.type = 'sine';
+                osc1.frequency.setValueAtTime(freq, now);
+                osc2.frequency.setValueAtTime(freq * 2, now);
+
+                gain.gain.setValueAtTime(0.0001, now);
+                gain.gain.linearRampToValueAtTime(0.075, now + 0.025);
+                gain.gain.exponentialRampToValueAtTime(0.0006, now + duration * 1.45);
+
+                overtoneGain.gain.setValueAtTime(0.25, now);
+
+                osc1.connect(gain);
+                osc2.connect(overtoneGain);
+                overtoneGain.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                osc1.start(now);
+                osc2.start(now);
+                osc1.stop(now + duration * 1.5);
+                osc2.stop(now + duration * 1.5);
+            }
+
+            start() {
+                this.ensureCtx();
+                if (this.isPlaying) return;
+                this.isPlaying = true;
+                document.getElementById('musicNoteIcon').classList.add('music-active-pulse');
+
+                const step = () => {
+                    if (!this.isPlaying) return;
+                    const note = this.notes[this.idx % this.notes.length];
+                    this.pluckDutar(note.f, note.d);
+                    this.idx++;
+                    this.timer = setTimeout(step, note.d * 1000);
+                };
+                step();
+            }
+
+            stop() {
+                this.isPlaying = false;
+                clearTimeout(this.timer);
+                document.getElementById('musicNoteIcon').classList.remove('music-active-pulse');
+            }
+
+            toggle() {
+                if (this.isPlaying) {
+                    this.stop();
+                    showToast(currentLang === 'uz' ? "Musiqa o'chirildi" : "Музыка выключена");
+                } else {
+                    this.start();
+                    showToast(currentLang === 'uz' ? "Musiqa yoqildi" : "Музыка включена");
+                }
+            }
+        }
+
+        const audioEngine = new UzbekWeddingAudio();
+
+        /* =====================================================================
+           2. DEFAULT DATA & URL ?c= CONFIGURATION
+           ===================================================================== */
+        const DEFAULT_CONFIG = {
+            groom: "Temurbek",
+            bride: "Nodirabegim",
+            date: "2026-04-05",
+            time: "18:00",
+            venueLine1: "YAKKA SAROY",
+            venueLine2: "RESTORANI",
+            regionUz: "Qashqadaryo",
+            regionRu: "Кашкадарья",
+            addressUz: "Mirhakim Oqilov ko‘chasi, 113",
+            addressRu: "ул. Мирхакима Окилова, 113",
+            landmarkUz: "Qizil-baqiri",
+            landmarkRu: "Кизил-бакири",
+            yandexUrl: "https://yandex.uz/maps/?text=Yakka%20Saroy%20Restorani%20Qashqadaryo",
+            googleUrl: "https://maps.google.com/?q=Yakka+Saroy+Restorani+Qashqadaryo",
+            msgUz: "Hayotimizdagi eng baxtli kunlardan biri – nikoh to‘yimizni siz bilan birga nishonlashni niyat qildik.\nSizni ushbu kechamizga samimiy taklif etamiz.\nQuvonchli kunimizda aziz mehmonimiz bo‘lishingizni intizorlik bilan kutamiz.",
+            msgRu: "Один из самых счастливых дней в нашей жизни – мы решили отпраздновать нашу свадьбу вместе с вами.\nИскренне приглашаем вас на этот прекрасный вечер.\nС нетерпением ждём вас в качестве нашего дорогого гостя."
+        };
+
+        let config = { ...DEFAULT_CONFIG };
+        let currentLang = 'uz';
+
+        function encodeShareUrl(obj) {
+            try {
+                const base64 = btoa(unescape(encodeURIComponent(JSON.stringify(obj))));
+                const url = new URL(window.location.href);
+                url.searchParams.set('c', base64);
+                return url.toString();
+            } catch (e) {
+                return window.location.href;
+            }
+        }
+
+        function decodeShareUrl() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const c = params.get('c');
+                if (c) {
+                    const parsed = JSON.parse(decodeURIComponent(escape(atob(c))));
+                    config = { ...DEFAULT_CONFIG, ...parsed };
+                }
+            } catch (e) {
+                console.warn("Parametrlarni o'qishda xatolik, standart holat ishlatildi.");
+            }
+        }
+
+        /* =====================================================================
+           3. BILINGUAL DICTIONARY (UZ | RU) & DOM RENDERING
+           ===================================================================== */
+        const TEXTS = {
+            uz: {
+                envTopSub: "SIZ",
+                envMainTitle: "TO‘YIMIZGA",
+                envBottomScript: "taklif etilgansiz",
+                envWithLove: "muhabbat ila,",
+                andWord: "va",
+                scrollPrompt: "PASTGA TUSHIRING",
+                msgHeading: "Aziz va qadrdon insonimiz!",
+                venueTitle: "To‘y manzili",
+                yandexBtn: "YANDEX XARITASI",
+                googleBtn: "GOOGLE MAPS",
+                cdLine1: "Har lahzani",
+                cdLine2: "sanaymiz",
+                cdDays: "KUN",
+                cdHours: "SOAT",
+                cdMinutes: "DAQIQA",
+                cdSeconds: "SONIYA",
+                footerSub: "Baxtli kunimiz yaqinlashmoqda",
+                weekdays: ["DU", "SE", "CHOR", "PAY", "JU", "SHA", "YA"],
+                months: [
+                    "Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun",
+                    "Iyul", "Avgust", "Sentabr", "Oktabr", "Noyabr", "Dekabr"
+                ]
+            },
+            ru: {
+                envTopSub: "ВЫ",
+                envMainTitle: "НА НАШУ СВАДЬБУ",
+                envBottomScript: "приглашены",
+                envWithLove: "с любовью,",
+                andWord: "и",
+                scrollPrompt: "ЛИСТАЙТЕ ВНИЗ",
+                msgHeading: "Дорогой и близкий человек!",
+                venueTitle: "Место торжества",
+                yandexBtn: "ЯНДЕКС КАРТЫ",
+                googleBtn: "GOOGLE MAPS",
+                cdLine1: "Считаем каждое",
+                cdLine2: "мгновение",
+                cdDays: "ДНЕЙ",
+                cdHours: "ЧАСОВ",
+                cdMinutes: "МИНУТ",
+                cdSeconds: "СЕКУНД",
+                footerSub: "Наш счастливый день приближается",
+                weekdays: ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"],
+                months: [
+                    "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                    "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+                ]
+            }
+        };
+
+        function renderInvitation() {
+            const t = TEXTS[currentLang];
+            const groom = config.groom.trim() || "Temurbek";
+            const bride = config.bride.trim() || "Nodirabegim";
+
+            // Envelope Texts
+            document.getElementById('envTopSub').textContent = t.envTopSub;
+            document.getElementById('envMainTitle').textContent = t.envMainTitle;
+            document.getElementById('envBottomScript').textContent = t.envBottomScript;
+            document.getElementById('envWithLove').textContent = t.envWithLove;
+            document.getElementById('sealMonogram').textContent = `${groom.charAt(0).toUpperCase()} & ${bride.charAt(0).toUpperCase()}`;
+            document.getElementById('envCoupleNames').textContent = `${groom.toUpperCase()} ${currentLang === 'uz' ? 'VA' : 'И'} ${bride.toUpperCase()}`;
+
+            // Hero Names & Prompt
+            document.getElementById('groomDisplay').textContent = groom;
+            document.getElementById('andWordDisplay').textContent = t.andWord;
+            document.getElementById('brideDisplay').textContent = bride;
+            document.getElementById('scrollDownPrompt').textContent = t.scrollPrompt;
+
+            // Crimson Card Message
+            document.getElementById('msgHeadingDisplay').textContent = t.msgHeading;
+            const rawMsg = currentLang === 'uz' ? config.msgUz : config.msgRu;
+            const lines = rawMsg.split('\n').filter(l => l.trim().length > 0);
+            const msgContainer = document.getElementById('msgBodyDisplay');
+            msgContainer.innerHTML = lines.map((line, i) => `
+                <p class="reveal-text in-view" style="transition-delay: ${(i + 1) * 120}ms;">${line}</p>
+            `).join('');
+
+            // Venue & Maps
+            document.getElementById('venueSectionTitle').textContent = t.venueTitle;
+            document.getElementById('venueNameLine1').textContent = config.venueLine1;
+            document.getElementById('venueNameLine2').textContent = config.venueLine2;
+            document.getElementById('venueRegionDisplay').textContent = currentLang === 'uz' ? config.regionUz : config.regionRu;
+            document.getElementById('venueAddressDisplay').textContent = currentLang === 'uz' ? config.addressUz : config.addressRu;
+            const landmark = currentLang === 'uz' ? config.landmarkUz : config.landmarkRu;
+            document.getElementById('venueLandmarkDisplay').textContent = `${config.time} • ${landmark}`;
+
+            document.getElementById('yandexMapBtn').textContent = t.yandexBtn;
+            document.getElementById('yandexMapBtn').href = config.yandexUrl || '#';
+            document.getElementById('googleMapBtn').textContent = t.googleBtn;
+            document.getElementById('googleMapBtn').href = config.googleUrl || '#';
+
+            // Countdown & Footer
+            document.getElementById('countdownTitleLine1').textContent = t.cdLine1;
+            document.getElementById('countdownTitleLine2').textContent = t.cdLine2;
+            document.getElementById('cdDaysLabel').textContent = t.cdDays;
+            document.getElementById('cdHoursLabel').textContent = t.cdHours;
+            document.getElementById('cdMinutesLabel').textContent = t.cdMinutes;
+            document.getElementById('cdSecondsLabel').textContent = t.cdSeconds;
+            document.getElementById('footerSubtitle').textContent = t.footerSub;
+
+            renderCalendarWeekRow();
+        }
+
+        /* =====================================================================
+           4. CALENDAR WEEK ROW WITH EMBOSSED 3D GOLD HEART (VIDEO 1:1 MATCH)
+           ===================================================================== */
+        function renderCalendarWeekRow() {
+            const t = TEXTS[currentLang];
+            const parts = (config.date || "2026-04-05").split('-').map(Number);
+            const year = parts[0] || 2026;
+            const monthIdx = (parts[1] ? parts[1] - 1 : 3);
+            const targetDay = parts[2] || 5;
+
+            document.getElementById('calendarMonthTitle').textContent = `${t.months[monthIdx]}, ${year}`;
+
+            // Weekday Header Row
+            const weekdaysEl = document.getElementById('calendarWeekdays');
+            weekdaysEl.innerHTML = t.weekdays.map(w => `<span>${w}</span>`).join('');
+
+            // Build the exact 7-day week containing the wedding date (matching 30 31 1 2 3 4 [5])
+            const targetDateObj = new Date(year, monthIdx, targetDay);
+            let dayOfWeek = targetDateObj.getDay() - 1; // Monday = 0 ... Sunday = 6
+            if (dayOfWeek < 0) dayOfWeek = 6;
+
+            const mondayOfWeek = new Date(year, monthIdx, targetDay - dayOfWeek);
+            const grid = document.getElementById('calendarDaysGrid');
+            grid.innerHTML = '';
+
+            for (let i = 0; i < 7; i++) {
+                const cellDate = new Date(mondayOfWeek.getFullYear(), mondayOfWeek.getMonth(), mondayOfWeek.getDate() + i);
+                const dayNum = cellDate.getDate();
+                const isTarget = (cellDate.getDate() === targetDay && cellDate.getMonth() === monthIdx);
+                const isOtherMonth = cellDate.getMonth() !== monthIdx;
+
+                if (isTarget) {
+                    const heartWrap = document.createElement('div');
+                    heartWrap.className = 'relative w-10 h-10 flex items-center justify-center gold-heart-beat';
+                    heartWrap.innerHTML = `
+                        <svg viewBox="0 0 40 36" class="w-10 h-9 drop-shadow-[0_4px_8px_rgba(140,101,30,0.45)]">
+                            <defs>
+                                <linearGradient id="goldHeart3D" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#F7E39E"/>
+                                    <stop offset="48%" stop-color="#DFBE6F"/>
+                                    <stop offset="100%" stop-color="#B08228"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M20 34.5 C20 34.5 2 22.8 2 11.2 C2 5.4 6.6 1.5 12 1.5 C15.6 1.5 18.6 3.4 20 6.1 C21.4 3.4 24.4 1.5 28 1.5 C33.4 1.5 38 5.4 38 11.2 C38 22.8 20 34.5 20 34.5 Z" fill="url(#goldHeart3D)" stroke="#8C651E" stroke-width="0.7"/>
+                        </svg>
+                        <span class="absolute font-display font-semibold text-[15px] text-white pb-0.5 drop-shadow-[0_1px_2px_rgba(90,55,8,0.6)]">${dayNum}</span>
+                    `;
+                    grid.appendChild(heartWrap);
+                } else {
+                    const span = document.createElement('span');
+                    span.className = `w-9 h-9 flex items-center justify-center text-[17px] ${isOtherMonth ? 'text-[#8C6D53]/45' : 'text-[#3B1E1A]'}`;
+                    span.textContent = dayNum;
+                    grid.appendChild(span);
+                }
+            }
+        }
+
+        /* =====================================================================
+           5. LIVE COUNTDOWN TIMER WITH TICK ANIMATION
+           ===================================================================== */
+        let prevSec = null;
+        function updateCountdown() {
+            const dateStr = config.date || "2026-04-05";
+            const timeStr = config.time || "18:00";
+            const target = new Date(`${dateStr}T${timeStr}:00`).getTime();
+            const now = Date.now();
+            const diff = Math.max(0, target - now);
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const mins = Math.floor((diff / 1000 / 60) % 60);
+            const secs = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+            document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('cdMinutes').textContent = String(mins).padStart(2, '0');
+
+            const secEl = document.getElementById('cdSeconds');
+            if (prevSec !== secs) {
+                secEl.style.opacity = '0.45';
+                secEl.style.transform = 'translateY(-3px)';
+                setTimeout(() => {
+                    secEl.textContent = String(secs).padStart(2, '0');
+                    secEl.style.opacity = '1';
+                    secEl.style.transform = 'translateY(0)';
+                }, 110);
+                prevSec = secs;
+            }
+        }
+
+        /* =====================================================================
+           6. ENVELOPE OPENING TRANSITION & INTERSECTION OBSERVER
+           ===================================================================== */
+        const envelopeStage = document.getElementById('envelopeStage');
+        let isEnvelopeOpened = false;
+
+        function openEnvelopeSequence() {
+            if (isEnvelopeOpened) return;
+            isEnvelopeOpened = true;
+
+            audioEngine.playEnvelopeUnfold();
+            audioEngine.start();
+
+            envelopeStage.classList.add('opening');
+            document.getElementById('envelopeBottomText').style.opacity = '0';
+
+            setTimeout(() => {
+                envelopeStage.classList.add('opened');
+                document.body.classList.add('invitation-revealed');
+                initScrollRevealObserver();
+            }, 340);
+
+            setTimeout(() => {
+                envelopeStage.style.display = 'none';
+            }, 1250);
+        }
+
+        document.getElementById('waxSealBtn').addEventListener('click', (e) => {
+            e.stopPropagation();
+            openEnvelopeSequence();
+        });
+
+        envelopeStage.addEventListener('click', () => {
+            openEnvelopeSequence();
+        });
+
+        document.getElementById('musicToggleBtn').addEventListener('click', () => {
+            audioEngine.toggle();
+        });
+
+        // Language Switcher
+        const langUzBtn = document.getElementById('langUzBtn');
+        const langRuBtn = document.getElementById('langRuBtn');
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            if (lang === 'uz') {
+                langUzBtn.className = 'px-2.5 py-1 rounded-full bg-[#C8A252] text-white transition-all';
+                langRuBtn.className = 'px-2.5 py-1 rounded-full text-[#3B1E1A] hover:text-[#B68B32] transition-all';
+            } else {
+                langRuBtn.className = 'px-2.5 py-1 rounded-full bg-[#C8A252] text-white transition-all';
+                langUzBtn.className = 'px-2.5 py-1 rounded-full text-[#3B1E1A] hover:text-[#B68B32] transition-all';
+            }
+            renderInvitation();
+        }
+
+        langUzBtn.addEventListener('click', () => switchLanguage('uz'));
+        langRuBtn.addEventListener('click', () => switchLanguage('ru'));
+
+        function initScrollRevealObserver() {
+            const revealEls = document.querySelectorAll('.reveal-text');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.14 });
+
+            revealEls.forEach(el => observer.observe(el));
+        }
+
+        /* =====================================================================
+           7. CUSTOMIZATION MODAL & PERSONALIZED URL GENERATOR (?c=...)
+           ===================================================================== */
+        const settingsModal = document.getElementById('settingsModal');
+
+        function fillSettingsForm() {
+            document.getElementById('inpGroom').value = config.groom;
+            document.getElementById('inpBride').value = config.bride;
+            document.getElementById('inpDate').value = config.date;
+            document.getElementById('inpTime').value = config.time;
+            document.getElementById('inpVenue1').value = config.venueLine1;
+            document.getElementById('inpVenue2').value = config.venueLine2;
+            document.getElementById('inpRegion').value = config.regionUz;
+            document.getElementById('inpLandmark').value = config.landmarkUz;
+            document.getElementById('inpAddress').value = config.addressUz;
+            document.getElementById('inpYandex').value = config.yandexUrl;
+            document.getElementById('inpGoogle').value = config.googleUrl;
+            document.getElementById('inpMsgUz').value = config.msgUz;
+        }
+
+        function saveSettingsForm() {
+            config.groom = document.getElementById('inpGroom').value.trim() || DEFAULT_CONFIG.groom;
+            config.bride = document.getElementById('inpBride').value.trim() || DEFAULT_CONFIG.bride;
+            config.date = document.getElementById('inpDate').value || DEFAULT_CONFIG.date;
+            config.time = document.getElementById('inpTime').value || DEFAULT_CONFIG.time;
+            config.venueLine1 = document.getElementById('inpVenue1').value.trim() || DEFAULT_CONFIG.venueLine1;
+            config.venueLine2 = document.getElementById('inpVenue2').value.trim() || DEFAULT_CONFIG.venueLine2;
+            config.regionUz = document.getElementById('inpRegion').value.trim() || DEFAULT_CONFIG.regionUz;
+            config.landmarkUz = document.getElementById('inpLandmark').value.trim() || DEFAULT_CONFIG.landmarkUz;
+            config.addressUz = document.getElementById('inpAddress').value.trim() || DEFAULT_CONFIG.addressUz;
+            config.yandexUrl = document.getElementById('inpYandex').value.trim() || DEFAULT_CONFIG.yandexUrl;
+            config.googleUrl = document.getElementById('inpGoogle').value.trim() || DEFAULT_CONFIG.googleUrl;
+            config.msgUz = document.getElementById('inpMsgUz').value.trim() || DEFAULT_CONFIG.msgUz;
+        }
+
+        document.getElementById('openSettingsBtn').addEventListener('click', () => {
+            fillSettingsForm();
+            settingsModal.classList.remove('hidden');
+            settingsModal.classList.add('flex');
+        });
+
+        document.getElementById('closeSettingsBtn').addEventListener('click', () => {
+            settingsModal.classList.add('hidden');
+            settingsModal.classList.remove('flex');
+        });
+
+        document.getElementById('applySettingsBtn').addEventListener('click', () => {
+            saveSettingsForm();
+            renderInvitation();
+            updateCountdown();
+            settingsModal.classList.add('hidden');
+            settingsModal.classList.remove('flex');
+            showToast("Taklifnoma yangilandi!");
+        });
+
+        document.getElementById('copyShareLinkBtn').addEventListener('click', () => {
+            saveSettingsForm();
+            renderInvitation();
+            updateCountdown();
+            const shareUrl = encodeShareUrl(config);
+
+            const textarea = document.createElement('textarea');
+            textarea.value = shareUrl;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            showToast("Shaxsiy havola nusxalandi!");
+        });
+
+        let toastTimeout = null;
+        function showToast(msg) {
+            const box = document.getElementById('toastBox');
+            box.textContent = msg;
+            box.classList.remove('opacity-0');
+            box.classList.add('opacity-100');
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                box.classList.remove('opacity-100');
+                box.classList.add('opacity-0');
+            }, 2500);
+        }
+
+        window.onload = function () {
+            decodeShareUrl();
+            renderInvitation();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        };
+    </script>
+</body>
+</html>
+```
